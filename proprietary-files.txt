@@ -88,9 +88,6 @@ lib/libtfa98xx.so
 # cbd, from boot.img and pinned to stop removal when extracting from system image
 bin/cbd:vendor/bin/cbd|1b3ec965475829467a09e86a7103bc4086e66194
 
-# sswap, from boot.img and pinned to stop removal when extracting from system image
-bin/sswap:vendor/bin/sswap|1670863f292325de353373caa9b8d34e47276eee
-
 # Lifevibes audio enhancer
 vendor/lib/libLifevibes_lvverx.so:vendor/lib/soundfx/libLifevibes_lvverx.so
 vendor/lib/libLifevibes_lvvetx.so:vendor/lib/soundfx/libLifevibes_lvvetx.so
