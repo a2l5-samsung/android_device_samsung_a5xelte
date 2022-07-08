@@ -62,6 +62,7 @@ function blob_fixup() {
 	    "${PATCHELF}" --add-needed libexynoscamera_shim.so "${2}"
 	    ;;
 	lib/libsec-ril*.so)
+	    "${PATCHELF}" --add-needed libcutils_shim.so "${2}"
 	    "${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so "${2}"
 	    sed -i 's/\/system\/bin\/gpsd/\/vendor\/bin\/gpsd/g' "${2}"
 	    ;;
