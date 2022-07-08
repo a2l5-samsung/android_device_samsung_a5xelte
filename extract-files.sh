@@ -55,7 +55,13 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-	vendor/lib64/libsec-ril*)
+	lib/libbauthserver.so)
+	    "${PATCHELF}" --add-needed libbauthtzcommon_shim.so "${2}"
+	    ;;
+	lib/libexynoscamera.so)
+	    "${PATCHELF}" --add-needed libexynoscamera_shim.so "${2}"
+	    ;;
+	lib/libsec-ril*.so)
 	    "${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so "${2}"
 	    sed -i 's/\/system\/bin\/gpsd/\/vendor\/bin\/gpsd/g' "${2}"
 	    ;;
