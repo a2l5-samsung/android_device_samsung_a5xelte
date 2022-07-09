@@ -82,7 +82,8 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras \
-    android.hardware.nfc@1.0-impl
+    android.hardware.nfc@1.0-impl \
+    android.hardware.nfc@1.0-service
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -143,7 +144,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/filter_ie:system/etc/wifi/filter_ie
 
 # Properties
--include $(LOCAL_PATH)/system_prop.mk
+include $(LOCAL_PATH)/system_prop.mk
 
 # Inherit from universal7580-common
 $(call inherit-product, device/samsung/universal7580-common/device-common.mk)
